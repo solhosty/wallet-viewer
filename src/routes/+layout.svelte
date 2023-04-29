@@ -40,7 +40,6 @@
 		if ($walletStore$?.connected) {
 			console.log('Wallet Connected.');
 			userPublicKey.set($walletStore$.publicKey);
-            const solanaPrice = getPrice();
 		} else {
 			console.log('Wallet Not Connected.');
 			userPublicKey.set('');
@@ -52,14 +51,13 @@
     <main class="h-full">
         <slot></slot>
         {#if !$walletStore$?.connected}
-         
         <WalletProvider {localStorageKey} {wallets} autoConnect />
 								<ConnectionProvider {network} />
 								<WalletMultiButton>
 									<h2>connect</h2>
 								</WalletMultiButton>
                                 <WalletModal/>
-        {:else}
+        {:else if $walletStore$?.connected}
         <WalletProvider {localStorageKey} {wallets} autoConnect />
             <ConnectionProvider {network} />
             <WalletMultiButton/>
