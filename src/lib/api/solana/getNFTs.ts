@@ -7,7 +7,7 @@ import { PUBLIC_RPC_HOST } from '$env/static/public';
 
 const getNFTs = async () => {
 	const publicKey = get(userPublicKey);
-	const network = PUBLIC_RPC_HOST;
+	const network = "https://light-autumn-sanctuary.solana-mainnet.discover.quiknode.pro/7779052a9ee594a9e6c09b7d5b28cca360f5685f/";
 	const connection = new Connection(network);
 	const wallet = publicKey;
 	const identity = keypairIdentity(wallet);
