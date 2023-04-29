@@ -34,7 +34,7 @@
 				<button class="page-button mb-4"> <h2>Solflare</h2></button>
 			</a>
 			<button class="close" on:click={toggleModal}
-				><img src="/images/shared/close.svg" alt="" /></button
+				><img src="/close.svg" alt="" /></button
 			>
 		</div>
 	</div>
@@ -69,7 +69,7 @@
 	}
 
 	.modal-header {
-		background-image: radial-gradient(rgb(105, 151, 212), rgb(116, 152, 231));
+		background-image: radial-gradient(rgb(180, 192, 207), rgb(196, 210, 242));
 		padding: 10px;
 		width: 83%;
 		margin: auto;
