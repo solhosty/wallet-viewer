@@ -20,7 +20,7 @@
 		</div>
 		<div class="modal-body">
 			<a
-				href="https://phantom.app/ul/browse/https%3A%2F%2Fminion-ui.vercel.app%2Fhome?ref=https%3A%2F%2Fminion-ui.vercel.app%2Fhome"
+				href="https://phantom.app/ul/browse/https%3A%2F%2Fwallet-viewer.vercel.app%2F?ref=https%3A%2F%2Fwallet-viewer.vercel.app%2F"
 				rel="noreferrer"
 				target="_blank"
 			>
