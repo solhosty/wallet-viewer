@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto:wght@900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 { 
+    font-size: 2rem;
+    color: white;
+    margin: auto;
+    font-family: 'Bruno Ace', cursive;
+}

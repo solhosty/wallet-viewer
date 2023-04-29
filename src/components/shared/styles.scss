@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Rubik+Mono+One&display=swap');
+@import url('https://use.typekit.net/ykf5ouy.css');
+
+#root {
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	font-size: 3.5rem;
+	font-family: proxima-nova-condensed, sans-serif;
+	font-weight: 900;
+	font-style: normal;
+	margin-bottom: 0%;
+	text-shadow: 0 5px 0 #3b3b3b;
+	margin-top: 0%;
+	text-align: center;
+	color: white;
+}
+
+h2 {
+	font-size: 1.2rem;
+	font-family: 'Rubik Mono One';
+	margin-top: 0%;
+	margin-bottom: 0%;
+	color: white;
+	text-align: center;
+	text-shadow: 0 5px 0 #3b3b3b;
+	width: 100%;
+}
+
+h5 {
+	font-family: proxima-nova-condensed, sans-serif;
+	font-weight: 900;
+	font-size: 2rem;
+	color: white;
+	text-align: center;
+	text-shadow: 0 5px 0 #3b3b3b;
+	margin-bottom: 0%;
+	margin-top: 0%;
+}
+
+h6 {
+	font-family: proxima-nova-condensed, sans-serif;
+	font-weight: 900;
+	font-size: 1.4rem;
+	color: white;
+	text-align: center;
+	text-shadow: 0 5px 0 #3b3b3b;
+	margin-bottom: 0%;
+	margin-top: 0%;
+}
+
+.header-text {
+	color: white;
+	align-items: center;
+	text-align: center;
+}
+
+.sm-card-flex {
+	border-radius: 10px;
+	width: 85%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgba(0, 0, 0, 0.3);
+	align-items: center;
+	margin-bottom: 5%;
+	padding-bottom: 5%;
+	padding: 1rem;
+}
+
+.sm-card {
+	flex: 0 0 250px;
+	height: 500px;
+	margin: auto;
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	margin-top: 2%;
+}
+
+.sm-card-image {
+	height: 60%;
+	justify-content: center;
+	display: flex;
+	flex: 0 0 240px;
+	background-size: cover;
+	position: relative;
+	border-radius: 10px;
+}
+
+.sm-card-text {
+	height: 40%;
+	flex: 0 0 250px;
+	background-color: rgba(0, 0, 0, 0.2);
+	position: relative;
+	top: 60%;
+	right: 100%;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.lg-card-flex {
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 5%;
+	padding-bottom: 5%;
+}
+
+.lg-card {
+	width: 100%;
+	height: 582px;
+	margin: auto;
+	display: flex;
+	align-content: center;
+	border-radius: 10px;
+	margin-top: 2%;
+}
+
+.lg-card-image {
+	height: 60%;
+	flex: 0 0 570px;
+	background-size: cover;
+	border-radius: 10px;
+}
+
+.lg-card-text {
+	height: 40%;
+	flex: 0 0 570px;
+	background-color: rgba(0, 0, 0, 0.2);
+	position: relative;
+	top: 60%;
+	right: 100%;
+	text-align: center;
+	border-radius: 10px;
+}
+
+h3 {
+	font-size: 1rem;
+	font-family: 'Rubik Mono One';
+	margin-top: 0%;
+	color: white;
+	text-align: center;
+	text-shadow: 0 5px 0 #3b3b3b;
+}
+
+h4 {
+	font-size: 0.8rem;
+	font-family: 'Rubik Mono One';
+	margin-top: 0%;
+	color: white;
+	text-align: center;
+	width: 100%;
+}
+
+.xs-card-flex {
+	border-radius: 10px;
+	width: 100%;
+	height: 86%;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgba(0, 0, 0, 0.3);
+	align-items: center;
+	margin-bottom: 5%;
+	padding-bottom: 5%;
+}
+
+.xs-card {
+	flex: 0 0 40%;
+	height: 100%;
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	margin-top: 2%;
+	margin-left: 7%;
+}
+
+.carousel-item.active {
+	opacity: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	position: absolute;
+	top: 50%;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 15%;
+	height: 100px;
+	margin-top: -50px;
+	color: #fff;
+	background-color: transparent;
+	border: none;
+	text-align: center;
+	opacity: 0.5;
+	transition: opacity 0.15s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+	color: #fff;
+	text-decoration: none;
+	opacity: 0.9;
+}
+
+.carousel-control-prev {
+	left: 0;
+}
+
+.carousel-control-next {
+	right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	background: no-repeat 50%/100% 100%;
+}
+
+.carousel-control-prev-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.carousel-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.6s ease;
+}
