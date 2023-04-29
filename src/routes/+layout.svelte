@@ -19,7 +19,6 @@
 	import ProfileCard from '../components/solana/ProfileCard.svelte';
 	import { QueryClientProvider } from '@tanstack/svelte-query';
 	import type { LayoutData } from './$types';
-	import { PUBLIC_RPC_HOST } from '$env/static/public';
 	import WalletModal from '../components/solana/WalletModal.svelte';
 	import { get } from 'svelte/store';
 
