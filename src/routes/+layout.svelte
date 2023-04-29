@@ -94,7 +94,7 @@
 		position: relative;
 		left: 0%;
 		margin-top: 3%;
-        width: 30%;
+        width: 200px;
 		box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 	}
     .nfts {
