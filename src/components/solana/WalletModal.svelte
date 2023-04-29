@@ -27,7 +27,7 @@
 				<button class="page-button"> <h2>Phantom</h2></button>
 			</a>
 			<a
-				href="https://solflare.com/ul/browse/https%3A%2F%2Fminion-ui.vercel.app%2Fhome?ref=https%3A%2F%2Fminion-ui.vercel.app%2Fhome"
+				href="https://solflare.com/ul/browse/https%3A%2F%2Fwallet-viewer.vercel.app%2F?ref=https%3A%2F%2Fwallet-viewer.vercel.app%2F"
 				rel="noreferrer"
 				target="_blank"
 			>
