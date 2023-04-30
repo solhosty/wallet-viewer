@@ -24,21 +24,10 @@ const getNFTs = async () => {
 					metadata.name &&
 					metadata.image 
 				) {
-					const collectionAddress = nft.info.tokenAmount.tokenInfo.tokenId;
-					const collectionResponse = await fetch(`https://api-mainnet.magiceden.dev/v2/tokens/${collectionAddress}?`);
-					const collectionData = await collectionResponse.json();
-					const collectionName = collectionData.collection;
-					console.log(collectionName)
-					// Retrieve the floor price for the collection
-					const floorResponse = await fetch(`https://api-devnet.magiceden.dev/v2/collections/${collectionName}/stats`);
-					const floorData = await floorResponse.json();
-					const floorPrice = floorData.data.floor;
-					console.log(floorPrice)
-
 					return {
 						nft,
-						metadata,
-						floorPrice
+						metadata
+						// add selected property
 					};
 				} else {
 					return null;
