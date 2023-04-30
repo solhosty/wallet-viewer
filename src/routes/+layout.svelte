@@ -62,9 +62,7 @@
             <ConnectionProvider {network} />
             <WalletMultiButton/>
         <div class="mins w-full h-full mb-0 pt-0 mt-2">
-			<QueryClientProvider client={data.queryClient}>
-				<SolanaPrice />
-			</QueryClientProvider>
+		
             <div class="nfts grid m-5 mb-4 overflow-scroll m-auto">
                 <QueryClientProvider client={data.queryClient}>
                     <ProfileCard />

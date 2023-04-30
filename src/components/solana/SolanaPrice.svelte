@@ -12,12 +12,12 @@
 		queryFn: getPrice
 	});
     const nftQuery = createQuery({
-        queryKey: ['length'],
+        queryKey: ['nfts'],
         queryFn: getNFTs
     });
 </script>
+
 <div class="price-ticker">
-    
        <h4> <img src="https://raw.githubusercontent.com/birdeye-so/birdeye-ads/main/network/solana.png" alt="">  Sol Price ${$priceQuery.data}</h4>
        <h4> nfts owned - {$nftQuery.data.length} </h4>
     
