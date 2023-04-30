@@ -3,7 +3,6 @@ import { Connection } from '@solana/web3.js';
 import { Metaplex, keypairIdentity } from '@metaplex-foundation/js';
 import { userPublicKey } from '../../stores';
 import { get } from 'svelte/store';
-import { PUBLIC_RPC_HOST } from '$env/static/public';
 
 const getNFTs = async () => {
 	const publicKey = get(userPublicKey);
@@ -27,7 +26,6 @@ const getNFTs = async () => {
 					return {
 						nft,
 						metadata
-						// add selected property
 					};
 				} else {
 					return null;

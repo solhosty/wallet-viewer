@@ -29,11 +29,39 @@
 					{nft.metadata.name}
 				</h4>
 			</div>
+			<div class="button-row">
+			<a href="https://magiceden.io/item-details/{nft.nft.mintAddress}" target="_blank">
+			<button class="market-btn me"> <img src="https://www.solanaterminal.com/media/magic-eden.png" alt=""/> </button>
+			</a>
+			<a href="https://exchange.art/single/{nft.nft.mintAddress}" target="_blank">
+				<button class="market-btn ea"> <img src="/ea.svg" alt=""/> </button>
+				</a>
+			</div>
 		</div>
 	{/each}
 {/if}
 
 <style>
+	.button-row { 
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+	}
+	.me {
+		width: 40px;
+	}
+	.market-btn  { 
+		background-color: rgba(0, 0, 0, 0.4);
+		display: flex;
+		flex-direction: row;
+		border-radius: 10px;
+
+	}
+	.ea {
+		width: 130px;
+		height: 25px;
+	}
 	.min-name {
 		text-decoration: none;
 		color: rgb(87, 77, 77);
@@ -51,5 +79,6 @@
 
 	.nft img {
 		border-radius: 10px;
+		height: 100%;
 	}
 </style>
