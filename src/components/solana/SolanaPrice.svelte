@@ -13,14 +13,23 @@
 </script>
 <div class="price-ticker">
     
-       <h4> Sol Price {$priceQuery.data}</h4>
+       <h4> <img src="https://raw.githubusercontent.com/birdeye-so/birdeye-ads/main/network/solana.png" alt="">  Sol Price {$priceQuery.data}</h4>
     
 </div>
 <style>
+    img { 
+        width: 20px;
+        margin-right: 1%;
+    }
     h4 { 
        text-align: left;
        position: relative;
-       left: 10px;
+       left: 20px;
        top: 10px;
+       width: 400px;
+       display: flex;
+       flex-direction: row;
+       position: relative;
+       top: 20px;
     }
 </style>
