@@ -5,15 +5,21 @@
 	import { userPublicKey } from '../../lib/stores.ts';
 	import '../../app.css';
 	import { getPrice } from '$lib/api/solana/getPrice.ts';
+	import { getNFTs } from '$lib/api/solana/getNFTs.ts';
 
 	const priceQuery = createQuery({
 		queryKey: ['price'],
 		queryFn: getPrice
 	});
+    const nftQuery = createQuery({
+        queryKey: ['length'],
+        queryFn: getNFTs
+    });
 </script>
 <div class="price-ticker">
     
-       <h4> <img src="https://raw.githubusercontent.com/birdeye-so/birdeye-ads/main/network/solana.png" alt="">  Sol Price {$priceQuery.data}</h4>
+       <h4> <img src="https://raw.githubusercontent.com/birdeye-so/birdeye-ads/main/network/solana.png" alt="">  Sol Price ${$priceQuery.data}</h4>
+       <h4> nfts owned - {$nftQuery.data.length} </h4>
     
 </div>
 <style>
