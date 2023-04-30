@@ -10,7 +10,7 @@ export const load: LayoutLoad = async () => {
 				retry: false,
 				refetchOnReconnect: false,
 				refetchOnWindowFocus: false,
-				staleTime: Infinity
+				staleTime: Infinity,
 			}
 		}
 	});

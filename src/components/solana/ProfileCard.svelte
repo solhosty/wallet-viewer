@@ -23,6 +23,7 @@
 				class="min-img w-full h-auto object-cover"
 				src={nft.metadata.image}
 				alt={nft.metadata.name}
+				
 			/>
 			<div class="nft-info">
 				<h4 class="min-name mt-2 text-base font-medium text-center text-black">
@@ -56,7 +57,6 @@
 		display: flex;
 		flex-direction: row;
 		border-radius: 10px;
-
 	}
 	.ea {
 		width: 130px;

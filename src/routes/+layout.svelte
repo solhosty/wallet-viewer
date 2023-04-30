@@ -21,6 +21,7 @@
 	import type { LayoutData } from './$types';
 	import WalletModal from '../components/solana/WalletModal.svelte';
 	import { get } from 'svelte/store';
+	import SolanaPrice from '../components/solana/SolanaPrice.svelte';
 
 	export let data: LayoutData;
 	const userWallet = get(userPublicKey);
@@ -61,6 +62,9 @@
             <ConnectionProvider {network} />
             <WalletMultiButton/>
         <div class="mins w-full h-full mb-0 pt-0 mt-2">
+			<QueryClientProvider client={data.queryClient}>
+				<SolanaPrice />
+			</QueryClientProvider>
             <div class="nfts grid m-5 mb-4 overflow-scroll m-auto">
                 <QueryClientProvider client={data.queryClient}>
                     <ProfileCard />
