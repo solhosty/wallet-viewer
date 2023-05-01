@@ -25,13 +25,13 @@
     }
     @media (max-width: 700px) {
 		.header-text {
-            width: 600px;
+            width: 400px;
 		}
         img { 
             width: 50px;
         }
         h1 { 
-            max-width: 500px;
+            max-width: 400px;
    
         }
 	}
