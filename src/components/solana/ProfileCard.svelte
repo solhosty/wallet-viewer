@@ -1,15 +1,18 @@
 <script>
 	// @ts-nocheck
 	import { createQuery } from '@tanstack/svelte-query';
-	import { getNFTs } from '$lib/api/solana/getNFTs.ts';
-	import { fly } from 'svelte/transition';
-	import { userPublicKey } from '../../lib/stores.ts';
-	import '../../app.css';
+import { getNFTs } from '$lib/api/solana/getNFTs.ts';
+import { fly } from 'svelte/transition';
+import { userPublicKey } from '../../lib/stores.ts';
+import '../../app.css';
+import { lazyLoad } from './lazyLoad.ts';
+import { fade } from 'svelte/transition';
 
 	const nftsQuery = createQuery({
 		queryKey: ['nfts'],
 		queryFn: getNFTs
 	});
+	
 </script>
 
 {#if $nftsQuery.isLoading}
@@ -20,11 +23,13 @@
 	{#each $nftsQuery.data as nft}
 		<div transition:fly class="nft flex flex-col justify-center items-center bg-white p-2 mt-3">
 			<img
-				class="min-img w-full h-auto object-cover"
-				src={nft.metadata.image}
-				alt={nft.metadata.name}
-				
-			/>
+      use:lazyLoad
+      transition:fade
+      class="min-img w-full h-auto object-cover"
+      data-src={nft.metadata.image}
+      alt={nft.metadata.name}
+    />
+
 			<div class="nft-info">
 				<h4 class="min-name mt-2 text-base font-medium text-center text-black">
 					{nft.metadata.name}
@@ -43,6 +48,12 @@
 {/if}
 
 <style>
+
+.min-img {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
 	.button-row { 
 		display: flex;
 		flex-direction: row;

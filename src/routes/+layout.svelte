@@ -23,7 +23,7 @@
 	import { get } from 'svelte/store';
 	import SolanaPrice from '../components/solana/SolanaPrice.svelte';
 	import Footer from '../components/shared/Footer.svelte';
-
+	import Lazy from '../components/solana/Lazy.svelte';
 	export let data: LayoutData;
 	const userWallet = get(userPublicKey);
 	let wallets;
@@ -50,7 +50,10 @@
 </script>
 <body class="w-full h-full">
     <main class="h-full">
+		
         <slot></slot>
+		<div class="cool-border"></div>
+
         {#if !$walletStore$?.connected}
 		<div class="mt-24"> </div>
         <WalletProvider {localStorageKey} {wallets} autoConnect />
@@ -60,13 +63,13 @@
 								</WalletMultiButton>
                                 <WalletModal/>
         {:else if $walletStore$?.connected}
-        <WalletProvider {localStorageKey} {wallets} autoConnect />
-            <ConnectionProvider {network} />
-            <WalletMultiButton/>
         <div class="mins w-full h-full mb-0 pt-0 mt-2">
 			<QueryClientProvider client={data.queryClient}>
 				<SolanaPrice />
 			</QueryClientProvider>
+		    <div class="relative mt-5 ml-2"> 
+            <WalletMultiButton/>
+			</div>
             <div class="nfts grid m-5 mb-4 overflow-scroll m-auto">
                 <QueryClientProvider client={data.queryClient}>
                     <ProfileCard />
@@ -79,17 +82,25 @@
 
 
 <style>
+	.cool-border { 
+		border-top: 5px solid;
+		border-image:   linear-gradient(to right, #13b8a4 25%, #7f5feb 25%, #7f5feb 50%, #13b8a4ed 50%, #13b8a4ed 75%, #7f5feb 75%) 5;
+		width: 400px;
+		margin: auto;
+		margin-top: 3%;
+	}
     body { 
         background-image: radial-gradient(#5f5555, #0e0d0d);
         margin: auto;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+		
     }
     main { 
         width: 100%;
 		max-width: 700px;
-        margin: 0 auto;
+        margin: auto;
         justify-content: center;
         display: flex;
         flex-direction: column;
@@ -102,8 +113,7 @@
 		margin: auto;
 		justify-content: center;
 		position: relative;
-		left: 0%;
-		margin-top: 3%;
+		margin-top: 5%;
         max-width: 200px;
 		box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 	}
@@ -129,5 +139,6 @@
 		padding-bottom: 50px;
 		margin-top: 5%;
 	}
+
 	
 </style>
