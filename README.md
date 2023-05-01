@@ -32,8 +32,6 @@ To create a production version of your app:
 ```bash
 npm run build
 ```
+## Result 
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-# wallet-viewer
+<img width="1440" alt="Screenshot 2023-05-01 at 1 09 33 AM" src="https://user-images.githubusercontent.com/104146303/235409884-41bd78c1-8be1-4c1a-874c-c15d9da9937d.png">
