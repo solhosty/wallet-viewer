@@ -20,7 +20,7 @@
 <div class="price-ticker">
        <h4> <img src="https://raw.githubusercontent.com/birdeye-so/birdeye-ads/main/network/solana.png" alt="">  Sol Price ${$priceQuery.data}</h4>
        {#if $nftQuery.isLoading}
-         <h4> loading nfts...</h4>
+         <h4> NFTS Owned - ...</h4>
          {:else if $nftQuery.isError}
             <h4> error fetching nfts</h4>
             {:else if $nftQuery.data.length > 0}

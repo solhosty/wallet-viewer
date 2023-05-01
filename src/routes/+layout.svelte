@@ -51,6 +51,7 @@
     <main class="h-full">
         <slot></slot>
         {#if !$walletStore$?.connected}
+		<div class="mt-24"> </div>
         <WalletProvider {localStorageKey} {wallets} autoConnect />
 								<ConnectionProvider {network} />
 								<WalletMultiButton>
@@ -77,7 +78,7 @@
 
 <style>
     body { 
-        background-color: #d2c5c5;
+        background-image: radial-gradient(#5f5555, #0e0d0d);
         margin: auto;
         display: flex;
     }
