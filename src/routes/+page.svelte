@@ -9,17 +9,18 @@
         font-size: 2rem;
         display: flex;
         flex-direction: row;
-        width: 400px;
+        max-width: 400px;
        
     }
     img { 
         height: 100%;
+        max-width: 50px;
     }
     .header-text{
         display: flex;
         flex-direction: row;
         max-width: 100%;
-        width: 400px;
+        width: 450px;
         margin: auto;
     }
 </style>
