@@ -81,7 +81,9 @@
     body { 
         background-image: radial-gradient(#5f5555, #0e0d0d);
         margin: auto;
-        display: flex;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
     }
     main { 
         width: 100%;
@@ -101,14 +103,14 @@
 		position: relative;
 		left: 0%;
 		margin-top: 3%;
-        width: 200px;
+        max-width: 200px;
 		box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 	}
     .nfts {
 		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 		grid-gap: 10px;
 		max-height: 500px;
-		width: 93%;
+		width: 95%;
 		border-radius: 25px;
 		padding-bottom: 3%;
 		margin-bottom: 5%;
@@ -120,6 +122,8 @@
 		border-radius: 25px;
 		width: 100%;
 		max-width: 600px;
+		display: flex;
+		flex-direction: column;
 		margin: auto;
 		padding-bottom: 50px;
 		margin-top: 5%;

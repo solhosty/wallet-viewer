@@ -60,7 +60,7 @@
 		border-radius: 10px;
 	}
 	.ea {
-		width: 90px;
+		max-width: 130px;
 		padding: 5px;
 		height: 25px;
 	}

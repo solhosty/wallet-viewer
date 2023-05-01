@@ -1,7 +1,7 @@
 <script> 
 </script> 
 <div class="header-text">
-<h1 class="mt-6"> <img src="https://raw.githubusercontent.com/birdeye-so/birdeye-ads/main/network/solana.png" alt=""> Solana Portfolio</h1>
+<h1 class="mt-6"> <img src="https://raw.githubusercontent.com/birdeye-so/birdeye-ads/main/network/solana.png" alt=""> olana Portfolio</h1>
 </div>
 <style>
     h1 { 
@@ -25,13 +25,16 @@
     }
     @media (max-width: 700px) {
 		.header-text {
-            width: 400px;
+            width: 360px;
 		}
         img { 
-            width: 50px;
+            width: 30px;
+            height: 35px;
+            margin-top: 2%;
         }
         h1 { 
-            max-width: 400px;
+            max-width: 360px;
+            
    
         }
 	}
