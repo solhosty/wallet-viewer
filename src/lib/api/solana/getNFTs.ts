@@ -3,13 +3,12 @@ import { Connection } from '@solana/web3.js';
 import { Metaplex, keypairIdentity } from '@metaplex-foundation/js';
 import { userPublicKey } from '../../stores';
 import { get } from 'svelte/store';
-import { PUBLIC_RPC_HOST } from '$env/static/public';
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const getNFTs = async () => {
   const publicKey = get(userPublicKey);
-  const network = PUBLIC_RPC_HOST;
+  const network = "https://rpc.helius.xyz/?api-key=8bb81828-2b6b-422e-8272-8ac173443412";
   const connection = new Connection(network);
   const wallet = publicKey;
   const identity = keypairIdentity(wallet);
