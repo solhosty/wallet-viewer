@@ -50,7 +50,8 @@
 		justify-content: space-between;
 	}
 	.me {
-		width: 40px;
+		width: 35px;
+		padding: 5px;
 	}
 	.market-btn  { 
 		background-color: rgba(0, 0, 0, 0.4);
@@ -59,7 +60,8 @@
 		border-radius: 10px;
 	}
 	.ea {
-		width: 130px;
+		width: 90px;
+		padding: 5px;
 		height: 25px;
 	}
 	.min-name {
@@ -72,6 +74,7 @@
 		border-radius: 10px;
 		box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 		transition: transform 0.2s ease-in-out;
+	
 	}
 	.nft:hover {
 		transform: translateY(-2px);
@@ -80,5 +83,6 @@
 	.nft img {
 		border-radius: 10px;
 		height: 100%;
+		width: 100%;
 	}
 </style>

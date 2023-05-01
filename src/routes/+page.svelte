@@ -19,10 +19,23 @@
     .header-text{
         display: flex;
         flex-direction: row;
-        max-width: 100%;
-        width: 450px;
+       max-width: 100%;
+        width: 500px;
         margin: auto;
     }
+    @media (max-width: 700px) {
+		.header-text {
+            width: 600px;
+		}
+        img { 
+            width: 50px;
+        }
+        h1 { 
+            max-width: 500px;
+   
+        }
+	}
+    
 </style>
 
 

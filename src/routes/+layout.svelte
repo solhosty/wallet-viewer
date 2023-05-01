@@ -107,7 +107,8 @@
 		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 		grid-gap: 10px;
 		max-height: 500px;
-		width: 93%;
+		width: 650px;
+		max-width: 93%;
 		border-radius: 25px;
 		padding-bottom: 3%;
 		margin-bottom: 5%;
@@ -118,6 +119,9 @@
 		background-color: rgba(0, 0, 0, 0.3);
 		border-radius: 25px;
 		width: 100%;
-		max-width: 650px;
+		max-width: 700px;
+		padding-bottom: 50px;
+		margin-top: 5%;
 	}
+	
 </style>
