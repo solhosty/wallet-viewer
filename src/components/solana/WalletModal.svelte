@@ -9,14 +9,14 @@
 
 <button class="wallet-modal-btn" on:click={toggleModal}>
 	<h2>
-		Open in Wallet App 
+		Open in App 
 	</h2> </button
 >
 {#if modalOpen}
 	<div class="modal-overlay" />
 	<div class="modal" in:fade>
 		<div class="modal-header">
-			<h2 class="menu-title">Choose Wallet</h2>
+			<h2 class="menu-title">Choose App</h2>
 		</div>
 		<div class="modal-body">
 			<a
@@ -54,7 +54,7 @@
 
 	/* Add your CSS styles here */
 	.modal {
-		background-image: radial-gradient(rgb(105, 151, 212), rgb(116, 152, 231));
+		background-image: radial-gradient(rgb(43, 55, 70), rgb(29, 30, 34));
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -69,13 +69,13 @@
 	}
 
 	.modal-header {
-		background-image: radial-gradient(rgb(180, 192, 207), rgb(196, 210, 242));
+		background-image: radial-gradient(rgb(43, 55, 70), rgb(29, 30, 34));
 		padding: 10px;
 		width: 83%;
 		margin: auto;
 		border-bottom: 1px solid #ddd;
 		border-radius: 10px;
-		border: 8px white solid;
+		border: 4px white solid;
 	}
 	.wallet-modal-btn {
 		background-color: rgba(0, 0, 0, 0.3);
@@ -97,11 +97,10 @@
 		margin: auto;
 		margin-top: 5%;
 		flex-direction: column;
-		width: 300px;
+		width: 240px;
 		padding: 10px;
 	}
 	.modal-body {
-		background-image: radial-gradient(rgb(105, 151, 212), rgb(116, 152, 231));
 		padding: 20px;
 		border-radius: 20px;
 	}

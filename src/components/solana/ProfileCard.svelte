@@ -60,9 +60,8 @@
 		border-radius: 10px;
 	}
 	.ea {
-		max-width: 130px;
+		width: 120px;
 		padding: 5px;
-		height: 25px;
 	}
 	.min-name {
 		text-decoration: none;

@@ -22,6 +22,7 @@
 	import WalletModal from '../components/solana/WalletModal.svelte';
 	import { get } from 'svelte/store';
 	import SolanaPrice from '../components/solana/SolanaPrice.svelte';
+	import Footer from '../components/shared/Footer.svelte';
 
 	export let data: LayoutData;
 	const userWallet = get(userPublicKey);
@@ -73,9 +74,9 @@
             </div>
         </div>
         {/if}
-		<h4 class="mt-24"> created by hosty @ minions/matr</h4>
     </main>
 </body>
+
 
 <style>
     body { 
