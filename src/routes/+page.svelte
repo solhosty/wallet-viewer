@@ -29,11 +29,12 @@
 		}
         img { 
             width: 30px;
-            height: 35px;
+            height: 25px;
             margin-top: 2%;
         }
         h1 { 
-            max-width: 360px;
+            max-width: 300px;
+            font-size: 1.5rem;
             
    
         }
