@@ -11,37 +11,43 @@
 		queryKey: ['price'],
 		queryFn: getPrice
 	});
-    const nftQuery = createQuery({
-        queryKey: ['nfts'],
-        queryFn: getNFTs
-    });
+	const nftQuery = createQuery({
+		queryKey: ['nfts'],
+		queryFn: getNFTs
+	});
 </script>
 
 <div class="price-ticker">
-       <h4> <img src="https://raw.githubusercontent.com/birdeye-so/birdeye-ads/main/network/solana.png" alt="">  Sol Price ${$priceQuery.data}</h4>
-       {#if $nftQuery.isLoading}
-         <h4> NFTS Owned - ...</h4>
-         {:else if $nftQuery.isError}
-            <h4> error fetching nfts</h4>
-            {:else if $nftQuery.data.length > 0}
-       <h4> nfts owned - {$nftQuery.data.length} </h4>
-         {/if}
-    
+	<h4>
+		<img
+			src="https://raw.githubusercontent.com/birdeye-so/birdeye-ads/main/network/solana.png"
+			alt=""
+		/>
+		Sol Price ${$priceQuery.data}
+	</h4>
+	{#if $nftQuery.isLoading}
+		<h4>NFTS Owned - ...</h4>
+	{:else if $nftQuery.isError}
+		<h4>error fetching nfts</h4>
+	{:else if $nftQuery.data.length > 0}
+		<h4>nfts owned - {$nftQuery.data.length}</h4>
+	{/if}
 </div>
+
 <style>
-    img { 
-        width: 20px;
-        margin-right: 1%;
-    }
-    h4 { 
-       text-align: left;
-       position: relative;
-       left: 20px;
-       top: 10px;
-       width: 400px;
-       display: flex;
-       flex-direction: row;
-       position: relative;
-       top: 20px;
-    }
+	img {
+		width: 20px;
+		margin-right: 1%;
+	}
+	h4 {
+		text-align: left;
+		position: relative;
+		left: 20px;
+		top: 10px;
+		width: 400px;
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		top: 20px;
+	}
 </style>

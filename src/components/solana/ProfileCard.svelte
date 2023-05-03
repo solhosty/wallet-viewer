@@ -1,18 +1,17 @@
 <script>
 	// @ts-nocheck
 	import { createQuery } from '@tanstack/svelte-query';
-import { getNFTs } from '$lib/api/solana/getNFTs.ts';
-import { fly } from 'svelte/transition';
-import { userPublicKey } from '../../lib/stores.ts';
-import '../../app.css';
-import { lazyLoad } from './lazyLoad.ts';
-import { fade } from 'svelte/transition';
+	import { getNFTs } from '$lib/api/solana/getNFTs.ts';
+	import { fly } from 'svelte/transition';
+	import { userPublicKey } from '../../lib/stores.ts';
+	import '../../app.css';
+	import { lazyLoad } from './lazyLoad.ts';
+	import { fade } from 'svelte/transition';
 
 	const nftsQuery = createQuery({
 		queryKey: ['nfts'],
 		queryFn: getNFTs
 	});
-	
 </script>
 
 {#if $nftsQuery.isLoading}
@@ -23,12 +22,12 @@ import { fade } from 'svelte/transition';
 	{#each $nftsQuery.data as nft}
 		<div transition:fly class="nft flex flex-col justify-center items-center bg-white p-2 mt-3">
 			<img
-      use:lazyLoad
-      transition:fade
-      class="min-img w-full h-auto object-cover"
-      data-src={nft.metadata.image}
-      alt={nft.metadata.name}
-    />
+				use:lazyLoad
+				transition:fade
+				class="min-img w-full h-auto object-cover"
+				data-src={nft.metadata.image}
+				alt={nft.metadata.name}
+			/>
 
 			<div class="nft-info">
 				<h4 class="min-name mt-2 text-base font-medium text-center text-black">
@@ -36,11 +35,13 @@ import { fade } from 'svelte/transition';
 				</h4>
 			</div>
 			<div class="button-row">
-			<a href="https://magiceden.io/item-details/{nft.nft.mintAddress}" target="_blank">
-			<button class="market-btn me"> <img src="https://www.solanaterminal.com/media/magic-eden.png" alt=""/> </button>
-			</a>
-			<a href="https://exchange.art/single/{nft.nft.mintAddress}" target="_blank">
-				<button class="market-btn ea"> <img src="/ea.svg" alt=""/> </button>
+				<a href="https://magiceden.io/item-details/{nft.nft.mintAddress}" target="_blank">
+					<button class="market-btn me">
+						<img src="https://www.solanaterminal.com/media/magic-eden.png" alt="" />
+					</button>
+				</a>
+				<a href="https://exchange.art/single/{nft.nft.mintAddress}" target="_blank">
+					<button class="market-btn ea"> <img src="/ea.svg" alt="" /> </button>
 				</a>
 			</div>
 		</div>
@@ -48,13 +49,12 @@ import { fade } from 'svelte/transition';
 {/if}
 
 <style>
+	.min-img {
+		opacity: 1;
+		transition: opacity 1s;
+	}
 
-.min-img {
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-	.button-row { 
+	.button-row {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
@@ -64,7 +64,7 @@ import { fade } from 'svelte/transition';
 		width: 35px;
 		padding: 5px;
 	}
-	.market-btn  { 
+	.market-btn {
 		background-color: rgba(0, 0, 0, 0.4);
 		display: flex;
 		flex-direction: row;
@@ -84,7 +84,6 @@ import { fade } from 'svelte/transition';
 		border-radius: 10px;
 		box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 		transition: transform 0.2s ease-in-out;
-	
 	}
 	.nft:hover {
 		transform: translateY(-2px);

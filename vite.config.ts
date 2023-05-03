@@ -25,7 +25,7 @@ export default defineConfig({
 			plugins: [inject({ Buffer: ['buffer', 'Buffer'] })]
 		}
 	},
-	
+
 	optimizeDeps: {
 		esbuildOptions: {
 			plugins: [NodeGlobalsPolyfillPlugin({ buffer: true })],

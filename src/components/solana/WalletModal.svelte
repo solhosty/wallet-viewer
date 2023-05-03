@@ -8,10 +8,8 @@
 </script>
 
 <button class="wallet-modal-btn" on:click={toggleModal}>
-	<h2>
-		Open in App 
-	</h2> </button
->
+	<h2>Open in App</h2>
+</button>
 {#if modalOpen}
 	<div class="modal-overlay" />
 	<div class="modal" in:fade>
@@ -33,9 +31,7 @@
 			>
 				<button class="page-button mb-4"> <h2>Solflare</h2></button>
 			</a>
-			<button class="close" on:click={toggleModal}
-				><img src="/close.svg" alt="" /></button
-			>
+			<button class="close" on:click={toggleModal}><img src="/close.svg" alt="" /></button>
 		</div>
 	</div>
 {/if}
