@@ -26,6 +26,7 @@
 	import Lazy from '../components/solana/Lazy.svelte';
 	import Balance from '../components/solana/Balance.svelte';
 	import { getAsset } from '$lib/api/solana/getCompression';
+	import Domain from '../components/solana/Domain.svelte';
 	export let data: LayoutData;
 	const userWallet = get(userPublicKey);
 	let wallets;
@@ -74,6 +75,9 @@
 				</QueryClientProvider>
 				<QueryClientProvider client={data.queryClient}>
 					<Balance />
+				</QueryClientProvider>
+				<QueryClientProvider client={data.queryClient}>
+					<Domain />
 				</QueryClientProvider>
 				<div class="relative mt-5 ml-2">
 					<WalletMultiButton />
