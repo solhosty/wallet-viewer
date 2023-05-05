@@ -14,7 +14,7 @@
 	});
 </script>
 <div class="balance-ticker">
-	<h4>Domain- {$balanceQuery.data}</h4>
+	
 	{#if $balanceQuery.isIdle}
 		<h4>Domain - ...</h4>
 	{:else if $balanceQuery.isLoading}
