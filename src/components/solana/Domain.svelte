@@ -20,7 +20,7 @@
 	{:else if $balanceQuery.isLoading}
 		<h4>Loading Domain - ...</h4>
 	{:else if $balanceQuery.isError}
-		<h4 class="m-auto">No Domain</h4>
+		<h4 class="m-auto">Domain - No Domain</h4>
 	{/if}
 </div>
 
