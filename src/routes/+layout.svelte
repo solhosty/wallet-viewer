@@ -25,7 +25,6 @@
 	import Footer from '../components/shared/Footer.svelte';
 	import Lazy from '../components/solana/Lazy.svelte';
 	import Balance from '../components/solana/Balance.svelte';
-	import { getAsset } from '$lib/api/solana/getCompression';
 	import Domain from '../components/solana/Domain.svelte';
 	export let data: LayoutData;
 	const userWallet = get(userPublicKey);
@@ -44,8 +43,6 @@
 		if ($walletStore$?.connected) {
 			console.log('Wallet Connected.');
 			userPublicKey.set($walletStore$.publicKey);
-			const asset = getAsset($walletStore$.publicKey)
-			console.log(asset);
 		} else {
 			console.log('Wallet Not Connected.');
 			userPublicKey.set('');
@@ -76,9 +73,7 @@
 				<QueryClientProvider client={data.queryClient}>
 					<Balance />
 				</QueryClientProvider>
-				<QueryClientProvider client={data.queryClient}>
-					<Domain />
-				</QueryClientProvider>
+				
 				<div class="relative mt-5 ml-2">
 					<WalletMultiButton />
 				</div>
