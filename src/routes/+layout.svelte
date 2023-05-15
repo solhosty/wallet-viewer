@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { walletStore as walletStore$ } from '@svelte-on-solana/wallet-adapter-core';
 	import { onMount } from 'svelte';
+	import { connect } from '../lib/api/solana/websocket'
 	import {
 		WalletMultiButton,
 		WalletProvider,
@@ -48,6 +49,12 @@
 			userPublicKey.set('');
 		}
 	}
+	let data1 = '';
+
+	onMount(() => {
+	connect();
+});
+
 	const network =
 		'https://light-autumn-sanctuary.solana-mainnet.discover.quiknode.pro/7779052a9ee594a9e6c09b7d5b28cca360f5685f/';
 </script>
@@ -56,7 +63,6 @@
 	<main class="h-full">
 		<slot />
 		<div class="cool-border" />
-
 		{#if !$walletStore$?.connected}
 			<div class="mt-24" />
 			<WalletProvider {localStorageKey} {wallets} autoConnect />
