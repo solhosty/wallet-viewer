@@ -9,5 +9,4 @@ const getBalance = async () => {
 	const balance = data.nativeBalance / 1000000000
 	return balance.toFixed(3);
 };
-
 export { getBalance };

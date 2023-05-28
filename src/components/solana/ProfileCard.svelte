@@ -8,6 +8,7 @@
 	import { lazyLoad } from './lazyLoad.ts';
 	import { fade } from 'svelte/transition';
 
+	const isHidden = true;
 	const nftsQuery = createQuery({
 		queryKey: ['nfts'],
 		queryFn: getNFTs
@@ -34,6 +35,7 @@
 					{nft.metadata.name}
 				</h4>
 			</div>
+		{#if !isHidden}
 			<div class="button-row">
 				<a href="https://magiceden.io/item-details/{nft.nft.mintAddress}" target="_blank">
 					<button class="market-btn me">
@@ -44,6 +46,7 @@
 					<button class="market-btn ea"> <img src="/ea.svg" alt="" /> </button>
 				</a>
 			</div>
+		{/if}
 		</div>
 	{/each}
 {/if}
@@ -82,6 +85,7 @@
 
 	.nft {
 		border-radius: 10px;
+		display: flex;
 		box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 		transition: transform 0.2s ease-in-out;
 	}

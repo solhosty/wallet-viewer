@@ -8,11 +8,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const getNFTs = async () => {
 	const publicKey = get(userPublicKey);
-	const network = 'https://rpc.helius.xyz/?api-key=8bb81828-2b6b-422e-8272-8ac173443412';
-	const connection = new Connection(network);
-	const wallet = publicKey;
-	const identity = keypairIdentity(wallet);
-	const request = await fetch("https://rpc.helius.xyz/?api-key=8bb81828-2b6b-422e-8272-8ac173443412", { 
+	const data = await fetch("https://icarus.helius.xyz/?api-key=8bb81828-2b6b-422e-8272-8ac173443412", { 
 		method: 'POST',
 		headers: { 
 			'Content-Type': 'application/json',
@@ -28,7 +24,7 @@ const getNFTs = async () => {
 			},
 	})
 })
-const r = await request.json()
+const r = await data.json()
 const myNfts = await r.result.items
 console.log(myNfts)
 	const nfts = await Promise.all(
@@ -37,7 +33,6 @@ console.log(myNfts)
 				const response = await fetch(nft.content.json_uri);
 				const metadata = await response.json();
 				if (metadata.name && metadata.image) {
-					await delay(500); // Add a delay of 500ms
 					return {
 						nft,
 						metadata
