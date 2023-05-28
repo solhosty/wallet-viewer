@@ -12,15 +12,29 @@ const getNFTs = async () => {
 	const connection = new Connection(network);
 	const wallet = publicKey;
 	const identity = keypairIdentity(wallet);
-	const metaplex = new Metaplex(connection, wallet, identity);
-	const myNfts = await metaplex.nfts().findAllByOwner({
-		owner: wallet
-	});
-
+	const request = await fetch("https://rpc.helius.xyz/?api-key=8bb81828-2b6b-422e-8272-8ac173443412", { 
+		method: 'POST',
+		headers: { 
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			jsonrpc: '2.0',
+			id: '1',
+			method: 'getAssetsByOwner',
+			params: {
+				"ownerAddress": `${publicKey}`,
+				"page": 1,
+				"limit": 1000
+			},
+	})
+})
+const r = await request.json()
+const myNfts = await r.result.items
+console.log(myNfts)
 	const nfts = await Promise.all(
 		myNfts.map(async (nft) => {
 			try {
-				const response = await fetch(nft.uri);
+				const response = await fetch(nft.content.json_uri);
 				const metadata = await response.json();
 				if (metadata.name && metadata.image) {
 					await delay(500); // Add a delay of 500ms
